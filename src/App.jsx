@@ -43,7 +43,7 @@ function App() {
   }, [favoriteItems]);
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app">
         <ScrollToTop/>
         <Navbar/>
