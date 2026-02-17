@@ -48,7 +48,7 @@ const Home = () => {
                 <Link to="/gear" className="explore-link">
                 <div className="quick__card">
                     <h3>Gear</h3>
-                    <p>Run in style</p>
+                    <p>Run in style confidently</p>
                 </div>
                 </Link>
                 </div>

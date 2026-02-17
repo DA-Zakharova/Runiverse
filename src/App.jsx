@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
@@ -43,7 +43,7 @@ function App() {
   }, [favoriteItems]);
 
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <div className="app">
         <ScrollToTop/>
         <Navbar/>

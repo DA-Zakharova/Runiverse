@@ -27,6 +27,7 @@ const Favorites = () => {
 
     return (
         <div className="favorites">
+            <div className="favorites-hero">
             <h1 className="hero__title">My Favorites</h1>
             <h2 className="hero__subtitle">Your personal running universe</h2>
 
@@ -63,6 +64,7 @@ const Favorites = () => {
                     ))}
                 </div>
             )}
+        </div>
         </div>
     )
 }

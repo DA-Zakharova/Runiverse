@@ -16,9 +16,9 @@ const Gear = () => {
 
             <div className="plans-buttons">
             <button className={activeGear === "all" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("all")}>all</button>
-            <button className={activeGear === "5K" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("clothing")}>clothing</button>
-            <button className={activeGear === "10K" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("shoes")}>shoes</button>
-            <button className={activeGear === "Half Marathon" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("accessories")}>accessories</button>
+            <button className={activeGear === "clothing" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("clothing")}>clothing</button>
+            <button className={activeGear === "shoes" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("shoes")}>shoes</button>
+            <button className={activeGear === "accessories" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("accessories")}>accessories</button>
             </div>
 
             <div className="race-grid">

@@ -26,12 +26,30 @@ const Slider = () => {
         }
     };
     
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleTouchStart = (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+
+        if (touchStartX - touchEndX > 50) {
+        next(); // свайп влево
+        }
+
+        if (touchEndX - touchStartX > 50) {
+        prev(); // свайп вправо
+        }
+    };
 
     return (
-        <section className="slider">
-            <button onClick={prev}>←</button>
+        <section className="slider" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+            <button className="prev" onClick={prev}>←</button>
             <img src={images[index]} alt="runners"/>
-            <button onClick={next}>→</button>
+            <button className="next" onClick={next}>→</button>
         </section>
     )
 }
