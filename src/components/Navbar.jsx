@@ -16,7 +16,7 @@ function Navbar() {
             className={({ isActive }) => isActive ? "navLink active" : "navLink"} 
             to="/favorites"
             >
-            ⭐️({favoritesCount})
+            ⭐️ ({favoritesCount})
             </NavLink>
         </div>
 
@@ -68,7 +68,7 @@ function Navbar() {
             to="/favorites"
             onClick={closeMenu}
             >
-            ⭐️({favoritesCount})
+            ⭐️ ({favoritesCount})
             </NavLink>
         </nav>
         </header>
