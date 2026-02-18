@@ -12,13 +12,41 @@ body {
     flex-wrap: wrap;
 }
 
-nav {
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar {
+    display: none; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1A1A40;
+}
+
+.burger {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.menu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
     padding: 20px;
     background-color: #1A1A40;
+}
+
+.favDesktop {
+    display: inline-flex;
+    align-items: center;
 }
 
 .navLink {
@@ -676,8 +704,28 @@ nav {
     box-sizing: border-box;
     }
 
+    .topbar {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
     .navLink {
-        font-size: 30px;
+        font-size: 27px;
+    }
+
+    .favDesktop {
+        display: none;
     }
 
     .footer__text {

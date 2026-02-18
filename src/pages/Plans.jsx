@@ -25,7 +25,7 @@ const Plans = () => {
             <button className={activeLevel === "advanced" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveLevel("advanced")}>advanced</button>
             </div>
 
-            <div>
+            <div className="plansCard">
                 {filteredPlans.map((plan => <PlanCard key={plan.id} plan={plan}/>))}
             </div>
 
