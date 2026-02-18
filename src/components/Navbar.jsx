@@ -68,7 +68,7 @@ function Navbar() {
             to="/favorites"
             onClick={closeMenu}
             >
-            ⭐️ ({favoritesCount})
+            ⭐️({favoritesCount})
             </NavLink>
         </nav>
         </header>
