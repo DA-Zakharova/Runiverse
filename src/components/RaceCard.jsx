@@ -1,3 +1,4 @@
+import './RaceCard.css';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../redux/favoritesSlice";
 

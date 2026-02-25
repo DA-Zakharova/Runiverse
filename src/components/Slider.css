@@ -1,0 +1,34 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 80%;
+    border-radius: 16px;
+}
+
+.slider button {
+    font-size: 24px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+    .slider button {
+        display: none;
+    }
+
+    .slider img {
+        width: 100%;
+    }
+}

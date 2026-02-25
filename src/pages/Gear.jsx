@@ -1,6 +1,8 @@
+import './Gear.css';
 import { gear } from "../data/gear";
 import GearCard from "../components/GearCard";
 import { useState } from "react";
+import FilterButtons from "../components/FilterButtons";
 
 const Gear = () => {
 
@@ -8,20 +10,19 @@ const Gear = () => {
     const filteredGear = activeGear === "all" ? gear : gear.filter((item) => item.category === activeGear);
         
     return (
-        <div className="races">
-            <div className="races-title">
+        <div className="gear">
+            <div className="gear-title">
             <h1 className="hero__title">Gear for Every Run</h1>
             <p className="hero__subtitle">Comfort, speed, and style 👟</p>
             </div>
 
-            <div className="plans-buttons">
-            <button className={activeGear === "all" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("all")}>all</button>
-            <button className={activeGear === "clothing" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("clothing")}>clothing</button>
-            <button className={activeGear === "shoes" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("shoes")}>shoes</button>
-            <button className={activeGear === "accessories" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveGear("accessories")}>accessories</button>
-            </div>
+            <FilterButtons
+            options={["all", "clothing", "shoes", "accessories"]}
+            value={activeGear}
+            onChange={setActiveGear}
+            />
 
-            <div className="race-grid">
+            <div className="gear-grid">
                 {filteredGear.map((item => <GearCard key={item.id} item={item}/>))}
             </div>
         </div>

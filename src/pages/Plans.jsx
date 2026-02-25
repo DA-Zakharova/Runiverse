@@ -1,8 +1,10 @@
+import './Plans.css';
 import { plans } from "../data/plans";
 import PlanCard from "../components/PlanCard";
 import { useState } from "react";
 import plan from "../assets/plan.png";
 import Modal from "../components/Modal";
+import FilterButtons from "../components/FilterButtons";
 
 const Plans = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,12 +20,11 @@ const Plans = () => {
                 <p className="hero__subtitle">Pick your level and open a plan to see details.</p>
             </div>
 
-            <div className="plans-buttons">
-            <button className={activeLevel === "all" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveLevel("all")}>all</button>
-            <button className={activeLevel === "beginner" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveLevel("beginner")}>beginner</button>
-            <button className={activeLevel === "intermediate" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveLevel("intermediate")}>intermediate</button>
-            <button className={activeLevel === "advanced" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveLevel("advanced")}>advanced</button>
-            </div>
+            <FilterButtons
+            options={["all", "beginner", "intermediate", "advanced"]}
+            value={activeLevel}
+            onChange={setActiveLevel}
+            />
 
             <div className="plansCard">
                 {filteredPlans.map((plan => <PlanCard key={plan.id} plan={plan}/>))}

@@ -1,0 +1,32 @@
+.footer {
+    background: #1A1A40; 
+    color: #e5e7eb;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__logo {
+    width: 80px;
+    filter: invert(1);
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Oswald", serif;
+}
+
+
+@media (max-width: 500px) {
+    .footer__text {
+        font-size: 15px;
+    }
+
+    .footer__logo {
+        width: 60px;
+    }
+}

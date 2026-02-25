@@ -1,9 +1,11 @@
+import './Favorites.css';
 import { useDispatch, useSelector } from "react-redux";
 import { races } from "../data/races";
 import { gear } from "../data/gear";
 import RaceCard from "../components/RaceCard";
 import GearCard from "../components/GearCard";
 import { clearFavorites, toggleFavorite } from "../redux/favoritesSlice";
+import FavoritesSection from "../components/FavoritesSection";
 
 const Favorites = () => {
     const dispatch = useDispatch();
@@ -35,35 +37,33 @@ const Favorites = () => {
                 <button className="clearAll" onClick={handleClearAll}>clear all ❌</button>
             )}
 
-            <p className="hero__subtitle">Races</p>
-
-            {favoriteRaces.length === 0 ? (
-                <p className="favoritesText">No favorite races yet</p>
-            ) : (
-                <div className="favorite-grid">
-                    {favoriteRaces.map((race) => (
-                        <div className="favorite-card" key={race.id}>
-                            <RaceCard race={race}/>
-                            <button className="remove" onClick={() => dispatch(toggleFavorite({kind: "race", id: race.id}))}>remove</button>
-                        </div>
-                    ))}
+            <FavoritesSection
+            title="Races"
+            emptyText="No favorite races yet"
+            items={favoriteRaces}
+            renderItem={(race) => (
+                <div className="favorite-card" key={race.id}>
+                    <RaceCard race={race} />
+                    <button className="remove" onClick={() => dispatch(toggleFavorite({ kind: "race", id: race.id }))}>
+                        remove
+                    </button>
                 </div>
-            )}
+                )}
+            />
 
-            <p className="hero__subtitle">Gear</p>
-
-            {favoriteGear.length === 0 ? (
-                <p className="favoritesText">No favorite gear yet</p>
-            ) : (
-                <div className="favorite-grid">
-                    {favoriteGear.map((g) => (
-                        <div className="favorite-card" key={g.id}>
-                            <GearCard item={g}/>
-                            <button className="remove" onClick={() => dispatch(toggleFavorite({kind: "item", id: g.id}))}>remove</button>
-                        </div>
-                    ))}
+            <FavoritesSection
+            title="Gear"
+            emptyText="No favorite gear yet"
+            items={favoriteGear}
+            renderItem={(g) => (
+                <div className="favorite-card" key={g.id}>
+                    <GearCard item={g} />
+                    <button className="remove" onClick={() => dispatch(toggleFavorite({ kind: "item", id: g.id }))}>
+                        remove
+                    </button>
                 </div>
-            )}
+                )}
+            />
         </div>
         </div>
     )

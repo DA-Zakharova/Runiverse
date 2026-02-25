@@ -1,0 +1,160 @@
+.club-hero {
+    width: 60%;
+    margin: 40px auto;
+    padding: 70px 50px;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 107, 44, 0.12),
+        rgba(18, 28, 61, 0.08)
+    );
+    border: 1px solid rgba(18, 28, 61, 0.08);
+    border-radius: 18px;
+}
+
+.club-about {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.club-about p {
+    font-family: "Open Sans", serif;
+    font-size: 22px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(18, 28, 61, 0.08);
+    backdrop-filter: blur(6px);
+}
+
+.club-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.member-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    background-color: #FFFDCE;
+    border: 1px solid rgba(18, 28, 61, 0.10);
+    box-shadow: 0 10px 26px rgba(10, 20, 40, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-family: "Open Sans", serif;
+}
+
+.member-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: rgba(10, 20, 40, 0.95);
+}
+
+.member-card p {
+    font-size: 22px;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(10, 20, 40, 0.12);
+}
+
+.values-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    font-family: "Open Sans", serif;
+}
+
+.values-grid > div {
+    padding: 18px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(18, 28, 61, 0.10);
+    box-shadow: 0 10px 26px rgba(10, 20, 40, 0.08);
+    text-align: center;
+}
+
+.values-grid img {
+    display: block;
+    width: 350px;          
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto 10px auto;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 1px solid rgba(18, 28, 61, 0.08);
+}
+
+.values-grid h3 {
+    margin: 20px 0 6px 0;
+    font-size: 24px;
+    color: rgba(10, 20, 40, 0.95);
+}
+
+.values-grid p {
+    font-size: 22px;
+}
+
+.club-join {
+    margin-top: 40px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(18, 28, 61, 0.06);
+    border: 1px solid rgba(18, 28, 61, 0.08);
+}
+
+.club-join p {
+    color: rgba(10, 20, 40, 0.85);
+    font-weight: 600;
+    font-family: "Oswald", serif;
+    font-size: 24px;
+}
+
+
+@media (max-width: 500px) {
+    
+    .club-grid, .values-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .club-about p {
+        font-size: 20px;
+    }
+
+    .quick__title {
+        font-size: 30px;
+    }
+
+    .member-card h3, .values-grid h3, .club-join p {
+        font-size: 20px;
+    }
+
+    .plan-header h2 {
+        font-size: 19px;
+    }
+
+    .member-card p, .values-grid p {
+        font-size: 17px;
+    }
+
+    .club-hero, .club-about, .club-members, .club-values {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .club-about {
+        margin: 0;
+    }
+}
