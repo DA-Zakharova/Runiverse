@@ -1,13 +1,9 @@
-import { useEffect } from 'react';
 import './App.css';
 import {
   HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
-import { setFavorites } from './redux/favoritesSlice';
-
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Races from './pages/Races';
@@ -19,29 +15,6 @@ import Favorites from './pages/Favorites';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-  const dispatch = useDispatch();
-
-  const favoriteItems = useSelector(state => state.favorites.items);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("runiverse_favorites");
-
-    if (!saved) return;
-    try {
-      const parsed = JSON.parse(saved);
-      dispatch(setFavorites(parsed));
-    } catch (error) {
-      localStorage.removeItem("runiverse_favorites")
-    }
-  }, [dispatch]);
-
-  useEffect(() => {
-    localStorage.setItem(
-      "runiverse_favorites",
-      JSON.stringify(favoriteItems)
-    );
-  }, [favoriteItems]);
-
   return (
     <Router>
       <div className="app">

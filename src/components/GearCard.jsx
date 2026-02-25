@@ -1,3 +1,4 @@
+import './GearCard.css';
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../redux/favoritesSlice";
 
@@ -10,8 +11,8 @@ const GearCard = ({item}) => {
     );
 
     return (
-        <div className="race-card">
-            <div className="race-content">
+        <div className="gear-card">
+            <div className="gear-content">
                 <img className="gearImg" alt="city" src={item.image}/>
                 <h2>{item.name}</h2>
                 <p>$ {item.price}</p>

@@ -1,0 +1,29 @@
+.races {
+    display: flex;
+    flex-direction: column;
+}
+
+.races-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.race-grid {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+@media (max-width: 500px) {
+    .races {
+        margin-top: 20px;
+    }
+
+    .races-title {
+        margin-top: 30px;
+    }
+}

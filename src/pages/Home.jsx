@@ -1,3 +1,4 @@
+import './Home.css';
 import { useState } from "react";
 import Modal from "../components/Modal";
 import Slider from "../components/Slider";

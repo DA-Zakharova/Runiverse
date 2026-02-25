@@ -1,3 +1,4 @@
+import './PlanCard.css';
 import { useState } from "react";
 
 const PlanCard = ({plan}) => {

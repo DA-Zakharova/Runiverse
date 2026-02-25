@@ -1,3 +1,4 @@
+import './Slider.css';
 import { useState } from "react";
 import runners1 from "../assets/runners1.jpg";
 import runners2 from "../assets/runners2.jpg";
@@ -47,9 +48,9 @@ const Slider = () => {
 
     return (
         <section className="slider" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
-            <button className="prev" onClick={prev}>←</button>
+            <button onClick={prev}>←</button>
             <img src={images[index]} alt="runners"/>
-            <button className="next" onClick={next}>→</button>
+            <button onClick={next}>→</button>
         </section>
     )
 }

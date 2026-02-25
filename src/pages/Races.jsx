@@ -1,6 +1,8 @@
+import './Races.css';
 import { races } from "../data/races";
 import RaceCard from "../components/RaceCard";
 import { useState } from "react";
+import FilterButtons from "../components/FilterButtons";
 
 const Races = () => {
 
@@ -14,13 +16,11 @@ const Races = () => {
             <p className="hero__subtitle">Pick your next adventure 🌍</p>
             </div>
 
-            <div className="plans-buttons">
-            <button className={activeDistance === "all" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveDistance("all")}>all</button>
-            <button className={activeDistance === "5K" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveDistance("5K")}>5K</button>
-            <button className={activeDistance === "10K" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveDistance("10K")}>10K</button>
-            <button className={activeDistance === "Half Marathon" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveDistance("Half Marathon")}>Half Marathon</button>
-            <button className={activeDistance === "Marathon" ? "filter-btn filter-btn-active" : "filter-btn"} onClick={() => setActiveDistance("Marathon")}>Marathon</button>
-            </div>
+            <FilterButtons
+            options={["all", "5K", "10K", "Half Marathon", "Marathon"]}
+            value={activeDistance}
+            onChange={setActiveDistance}
+            />
 
             <div className="race-grid">
                 {filteredRaces.map((race => <RaceCard key={race.id} race={race}/>))}

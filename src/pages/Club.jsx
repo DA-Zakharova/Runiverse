@@ -1,3 +1,4 @@
+import './Club.css';
 import support from "../assets/support.jpg";
 import discipline from "../assets/discipline.jpg";
 import fun from "../assets/fun.jpg";

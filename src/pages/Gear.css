@@ -1,0 +1,30 @@
+.gear {
+    display: flex;
+    flex-direction: column;
+}
+
+.gear-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.gear-grid {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+@media (max-width: 500px) {
+    .gear {
+        margin-top: 20px;
+    }
+
+    .gear-title {
+        margin-top: 30px;
+    }
+}

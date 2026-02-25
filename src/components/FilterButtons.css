@@ -1,0 +1,55 @@
+.plans-buttons {
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-btn {
+    border: 2px solid rgba(18, 28, 61, 0.18);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 8px 16px;
+    border-radius: 999px;          
+    cursor: pointer;
+    font-family: "Open Sans", serif;
+    font-size: 22px;
+    color: #121c3d;
+}
+
+.filter-btn-active {
+    background: #ff8a50;
+    color: white;
+    border-color: #ff6b2c;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(255, 107, 44, 0.35);
+}
+
+
+@media (hover: hover) {
+    .filter-btn:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 107, 44, 0.12);
+        box-shadow: 0 8px 18px rgba(10, 20, 40, 0.08);
+        border-color: rgba(255, 107, 44, 0.35);
+    }
+
+    .filter-btn-active:hover {
+        transform: none;
+        box-shadow: 0 6px 16px rgba(255, 107, 44, 0.35);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .filter-btn {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .plans-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+}

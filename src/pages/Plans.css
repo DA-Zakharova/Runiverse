@@ -1,0 +1,30 @@
+.plans {
+    display: flex;
+    flex-direction: column;
+}
+
+.plans-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.plans-img {
+    width: 300px;
+    max-width: 100%;
+    display: block;
+}
+
+
+@media (max-width: 500px) {
+    .plans {
+        display: flex;
+        padding: 30px;
+        gap: 10px;
+    }
+
+    .plans-title {
+        margin-top: 30px;
+    }
+}
